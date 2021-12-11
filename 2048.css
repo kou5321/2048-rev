@@ -1,0 +1,95 @@
+body {
+    background-color: #faf8ef; /* 总体的背景颜色 */
+    display: flex; /* 弹性布局 */
+    justify-content: center;  /* 在容器中央对齐弹性项目 */
+    font-family: "Times New Roman",Georgia,Serif, "Clear Sans", "Helvetica Neue" /* 浏览器会使用它可识别的第一个值 */
+  }
+  
+  h1 {
+    font-size: 80px;
+    line-height: 0.7;
+    color: #776E65;
+    margin: 0px;
+  }
+  
+  .container {
+    width: 468px;
+    margin-top: 30px;  /* 设置元素的上外边距 */
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between; /* 均匀排列每个元素，首个元素放置于起点，末尾元素放置于终点 */
+    margin-bottom: 20px;
+  }
+  
+  .grid{
+    display: flex;
+    flex-wrap: wrap; /* 规定灵活的项目在必要的时候拆行或拆列。*/
+    width: 456px;
+    height: 456px;
+    background-color: #BBADA0;
+    border: 7px solid #BBADA0;
+    border-radius: 6px;
+    margin-top: 20px;
+  }
+  
+  .grid div {
+    width: 100px;
+    height: 100px;
+    margin: 7px;
+    border-radius: 3px;
+    background-color: #EEE4DA;
+    color: #afa192;
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    line-height: 1.6;
+  }
+  
+  .score-container {
+    text-align: center;
+    width: 70px;
+    height: 60px;
+    border-radius: 3px;
+    background-color: #8f7a66;
+    color: #FFFFFF;
+  }
+  
+  .hiscore-title {
+    font-size: 16px;
+  }
+  
+  #hiscore {
+    font-size: 30px;
+  }
+  
+  .score-title {
+    font-size: 16px;
+  }
+  
+  #score {
+    font-size: 30px;
+  }
+
+  .container input[type='button'] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #8f7a66;
+    padding: 14px 10px;
+    width: 150px;
+    outline: none;
+    color: black;
+    border-radius: 25px;
+    transition: 0.25s;
+}
+
+  @media only screen and (max-width:482px) { /*视口宽度*/
+    body{
+      display: block; /*块级元素*/
+    }
+  }
+  

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'> <!--IE兼容-->
+   <title>2048 Game</title>
+   <meta name='viewport' content='width=device-width, initial-scale=1'> <!--可视宽度 无任何缩放-->
+   <link rel='stylesheet' type='text/css' media='screen' href='./2048.css'> <!--css样式表-->
+   <script src='./2048.js'></script>
+   <!-- <script type="text/javascript">
+      
+   </script> -->
+</head>
+
+<body>
+   <div class="container">
+      <div class="info">
+         <h1>2048</h1>
+         <div class="score-container">
+            <div class="score-title">score</div>
+            <span id="score">0</span>
+            <div class="hiscore-title">score</div>
+            <span id="hiscore">0</span>
+         </div>
+      </div>
+      <span id="result">
+      <p>玩法说明：游戏的规则很简单，你需要控制所有方块向同一个方向运动，两个相同数字方块撞在一起之后合并成为他们的和，每次操作之后会随机生成一个2，最终得到一个“2048”的方块就算胜利了。</p>
+      <p><b>操作说明：使用上下左右四个方向键即可控制方块运动</b></p>
+      </span>
+
+      <input type="button" value="悔棋" onclick="redo()">
+      <div class="grid"></div>     <!-- 游戏工作区 -->
+
+   </div>
+</body>
+
+</html>

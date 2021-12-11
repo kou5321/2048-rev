@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>开始界面</title>
+</head>
+<style>
+    body {
+        margin: 0 auto;
+        padding: 0;
+        font-family: sans-serif;
+        background: url(./wlop.jpg);
+        background-repeat: no-repeat;
+        background-size: 130% auto;
+    }
+
+    .box {
+        width: 300px;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, .8);
+        text-align: center;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .9);
+        border-radius: 10px;
+
+
+    }
+
+    .box h1 {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .box input[type='text'],
+    .box input[type='button'] {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #3498db;
+        padding: 14px 10px;
+        width: 200px;
+        outline: none;
+        color: white;
+        border-radius: 25px;
+        transition: 0.25s;
+    }
+
+    .box input[type='text']:focus,
+    .box input[type='password']:focus {
+        width: 280px;
+        border-color: #FFF36E;
+    }
+
+    .submit {
+        border: 0;
+        background: none;
+        margin: 20px auto;
+        margin-top: 0;
+        display: inline-block;
+        text-align: center;
+        border: 2px solid #3498db;
+        padding: 10px 40px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    .submit:hover {
+        /*				background: #2ecc71;
+				border-color: #2ecc71;*/
+        font-size: 15px;
+        background-image: linear-gradient(to right, #2ecc71 0%, #FFF36E 100%);
+        border: 0;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <h1>2048</h1>
+        <input type="button" value="开始" onclick="jump_start()">
+        <!-- <input type="text" href="./2048.html" placeholder="开始" /> -->
+        <!-- <input type="password" placeholder="帮助" /> -->
+        <input type="button" value="退出" onclick="quit()">
+    </div>
+
+
+
+    <script type="text/javascript">
+        function jump_start() {
+            window.location.href = "./2048.html";
+        }
+
+        function quit() {
+            if (confirm("确定要退出吗？")) {
+                window.opener = null;
+                window.open('', '_self');
+                window.close();
+            }
+        }
+    </script>
+</body>
+
+</html>
